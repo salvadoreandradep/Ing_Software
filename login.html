@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con NavBar y Login</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos de navegación */
+        nav {
+            background-color: #212534;
+            color: #fff;
+            padding: 20px;
+            display: flex; /* Utilizamos flexbox para alinear los elementos */
+            justify-content: flex-end; /* Alineamos los elementos al final del contenedor */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la navegación */
+        }
+
+        /* Estilos de los enlaces dentro de la navegación */
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px; /* Espacio entre enlaces */
+            transition: color 0.3s ease; /* Transición suave para el color del texto */
+        }
+
+        /* Eliminar margen izquierdo del primer enlace */
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        /* Efecto al pasar el ratón sobre los enlaces */
+        nav a:hover {
+            text-decoration: underline;
+            color: #7991ea; /* Cambiar el color del texto al pasar el ratón */
+        }
+
+        /* Estilos mejorados para el contenido */
+        .contenido {
+            padding: 20px;
+            background-color: #f9f9f9; /* Fondo ligeramente gris para resaltar el contenido */
+            border-radius: 8px; /* Bordes redondeados para el contenedor de contenido */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+            margin: 20px; /* Añadir margen para separar del borde de la ventana */
+        }
+
+        /* Estilos para los títulos dentro del contenido */
+        .contenido h2 {
+            color: #333;
+            margin-top: 0; /* Eliminar margen superior predeterminado */
+            font-size: 1.8rem; /* Tamaño de fuente más grande para los títulos */
+            margin-bottom: 15px; /* Espacio adicional después del título */
+        }
+
+        /* Estilos para los párrafos dentro del contenido */
+        .contenido p {
+            color: #666;
+            line-height: 1.6; /* Ajustar el interlineado para una mejor legibilidad */
+            margin-bottom: 10px; /* Espacio adicional después de los párrafos */
+        }
+
+        /* Estilos para los enlaces dentro del contenido */
+        .contenido a {
+            color: #007bff; /* Color de enlace azul */
+            text-decoration: none; /* Quitar subrayado predeterminado */
+            transition: color 0.3s; /* Transición suave para el color de enlace */
+        }
+
+        /* Cambio de color al pasar el ratón sobre los enlaces */
+        .contenido a:hover {
+            color: #0056b3; /* Color más oscuro al pasar el ratón */
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #212534;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Estilos para el formulario de inicio de sesión */
+        #login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #login-form input[type="text"],
+        #login-form input[type="password"],
+        #login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #login-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #login-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    
+</nav>
+
+
+   
+    <form id="login-form" action="" method="POST">
+        <h2>Inicio de Sesión</h2>
+        <input type="text" name="username" placeholder="Nombre de usuario" required autocomplete="off">
+        <input type="password" name="password" placeholder="Contraseña" required autocomplete="off">
+        <input type="submit" href="login.html" value="Iniciar Sesión">
+    </form>
+
+
+
+<footer>
+    <p> Todos los derechos reservados para La Corte Suprema de Justicia - 2024</p>
+</footer>
+
+
+<script>
+
+document.getElementById("login-form").addEventListener("submit", function(event) {
+            // Evitar que el formulario se envíe
+            event.preventDefault();
+            // Redirigir a sesion.html
+            window.location.href = "principal.html";
+        });
+</script>
+</body>
+</html>
