@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos de navegación */
+        nav {
+            background-color: #212534;
+            color: #fff;
+            padding: 20px;
+            display: flex;/* Utilizamos flexbox para alinear los elementos */
+            justify-content: flex-end; /* Alineamos los elementos al final del contenedor */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la navegación */
+            
+            align-items: center;
+        }
+
+        /* Estilos de los enlaces dentro de la navegación */
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px; /* Espacio entre enlaces */
+            transition: color 0.3s ease; /* Transición suave para el color del texto */
+        }
+
+        /* Eliminar margen izquierdo del primer enlace */
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        /* Efecto al pasar el ratón sobre los enlaces */
+        nav a:hover {
+            text-decoration: underline;
+            color: #7991ea; /* Cambiar el color del texto al pasar el ratón */
+        }
+
+        /* Estilos mejorados para el contenido */
+
+        .contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px; /* Espacio arriba */
+    }
+
+    .boton {
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .boton:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #212534;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .buscador {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: auto;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: auto;
+}
+
+.buscador input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 5px;
+}
+
+.buscador button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.buscador button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="buscador">
+            <input type="text" id="busqueda" placeholder="REFF 0000-0000-0000">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+        <a href="principal.html">Inicio</a>
+        <a href="juzgados.html">Juzgados</a>
+        <a href="#">Perfil</a>
+        <a href="#">Cerrar Sesión</a>
+    </nav>
+    
+    
+
+<div>
+
+</div>
+
+<div class="contenido">
+    <button class="boton" onclick="seleccionarZona('Occidental')">Zona Occidental</button>
+    <button class="boton" onclick="seleccionarZona('Central')">Zona Central</button>
+    <button class="boton" onclick="seleccionarZona('Oriental')">Zona Oriental</button>
+</div>
+
+
+
+<footer>
+    <p>Derechos de autor © 2024 Sistema de Gestión de Casos Judiciales. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var busquedaInput = document.getElementById("busqueda");
+    
+    busquedaInput.addEventListener("input", function() {
+      
+
+        valor = "REFF " + valor.replace(/(\d{4})/g, '$1-'); 
+        // Eliminar el último guion adicional
+        
+      
+        this.value = valor;
+    });
+});
+
+
+function seleccionarZona(zona) {
+            // Redireccionar a otro HTML según la zona seleccionada
+            switch (zona) {
+                case 'Occidental':
+                    window.location.href = 'occidental.html';
+                    break;
+                case 'Central':
+                    window.location.href = 'central.html';
+                    break;
+                case 'Oriental':
+                    window.location.href = 'oriental.html';
+                    break;
+                default:
+                    // Manejar un caso por defecto si es necesario
+                    break;
+            }
+        }
+  </script>
+
+</body>
+</html>
