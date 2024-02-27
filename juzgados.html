@@ -144,7 +144,9 @@
 <div class="contenido">
     <button class="boton" onclick="seleccionarZona('Occidental')">Zona Occidental</button>
     <button class="boton" onclick="seleccionarZona('Central')">Zona Central</button>
+    <button class="boton" onclick="seleccionarZona('Paracentral')">Zona Paracentral</button>
     <button class="boton" onclick="seleccionarZona('Oriental')">Zona Oriental</button>
+    
 </div>
 
 
@@ -182,6 +184,9 @@ function seleccionarZona(zona) {
                     break;
                 case 'Oriental':
                     window.location.href = 'oriental.html';
+                    break;
+                    case 'Paracentral':
+                    window.location.href = 'Paracentral.html';
                     break;
                 default:
                     // Manejar un caso por defecto si es necesario
